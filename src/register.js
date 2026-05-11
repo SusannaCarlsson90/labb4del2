@@ -31,7 +31,7 @@ registerForm.addEventListener("submit", async (e) => {
       messageElement.style.color = "green";
       messageElement.innerText = "Konto skapat! Skickar dig till inloggning...";
       setTimeout(() => {
-        window.location.href = "index.html";
+        window.location.href = "/";
       }, 2000);
       //Om nej:
     } else {

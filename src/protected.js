@@ -1,7 +1,7 @@
 const API_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:3000"
-    : "https://labb4del1.onrender.com"; 
+    : "https://labb4del1.onrender.com";
 import "./style.css";
 
 //Hämtar HTML element för att kunna ändra dem senare
@@ -20,7 +20,7 @@ if (!token) {
 async function getProtectedData() {
   try {
     //Gör ett GET anrop till den skyddade routen i Backend
-    const response = await fetch(${API_URL}/api/protected, {
+    const response = await fetch(`${API_URL}/api/protected`, {
       method: "GET",
       headers: {
         //Skickar med token så att servern kan verifiera vem användaren är
