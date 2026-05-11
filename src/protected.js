@@ -13,7 +13,7 @@ const token = localStorage.getItem("token");
 
 //Om token saknas skicka tillbaka till startsidan
 if (!token) {
-  window.location.href = "index.html";
+  window.location.href = "/";
 }
 
 //Funktion för att hämta hemlig data från Backend
@@ -54,5 +54,5 @@ logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("token");
 
   //Skicka tillbaka användaren till startsidan
-  window.location.href = "index.html";
+  window.location.href = "/";
 });

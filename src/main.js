@@ -37,7 +37,7 @@ loginForm.addEventListener("submit", async (e) => {
 
       // Vänta en kort sekund så användaren hinner se meddelandet, sen byt sida
       setTimeout(() => {
-        window.location.href = "protected.html";
+        window.location.href = "/protected.html";
       }, 1000);
     } else {
       messageElement.style.color = "red";
