@@ -1,5 +1,7 @@
 # Labb 4 - Frontend (Del 2)
 
+Länk för att testköra: https://labb4del2.onrender.com/
+
 Detta är Frontend-delen byggd med Vite. Den kommunicerar med backenden för att hantera användarkonton och inloggning.
 
 ## Funktioner
