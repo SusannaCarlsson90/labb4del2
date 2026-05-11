@@ -1,13 +1,18 @@
 import "./style.css";
+
+//Hämtar från DOM
 const loginForm = document.querySelector("#loginForm");
 const messageElement = document.querySelector("#message");
 
+//Händelselyssnare på submit knapp
 loginForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  e.preventDefault(); //Förhindrar att sidan laddar om
 
+  //Hämtar inloggningsuppgifterna som användaren skriver in
   const username = document.querySelector("#username").value;
   const password = document.querySelector("#password").value;
 
+  //Skicka inloggningsuppgifterna till backenden via ett POST-anrop
   try {
     const response = await fetch("http://localhost:3000/api/login", {
       method: "POST",
