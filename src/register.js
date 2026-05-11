@@ -23,7 +23,7 @@ registerForm.addEventListener("submit", async (e) => {
       headers: { "Content-Type": "application/json" }, //Berättar för servern att vi skickar JSON-data
       body: JSON.stringify({ username, password }), //Omvandlar JS-objektet till JSON-sträng
     });
-    //Väntar svar från servern och omvandlar det itll ett objekt
+    //Väntar svar från servern och omvandlar det itll ett objektf
     const data = await response.json();
 
     //Kontrollerar om registrering lyckades
