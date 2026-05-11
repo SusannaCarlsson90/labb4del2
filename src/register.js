@@ -1,5 +1,7 @@
-import "./style.css";
-
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3000"
+    : "https://labb4del1.onrender.com"; //
 import "./style.css";
 
 //Hämta från DOM
@@ -16,7 +18,7 @@ registerForm.addEventListener("submit", async (e) => {
 
   try {
     //Skickar post förfrågan för att skapa en ny användare
-    const response = await fetch("http://localhost:3000/api/register", {
+    const response = await fetch(`${API_URL}/api/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" }, //Berättar för servern att vi skickar JSON-data
       body: JSON.stringify({ username, password }), //Omvandlar JS-objektet till JSON-sträng

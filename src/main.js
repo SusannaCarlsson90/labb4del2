@@ -1,3 +1,7 @@
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3000"
+    : "https://labb4del1.onrender.com";
 import "./style.css";
 
 //Hämtar från DOM
@@ -14,7 +18,7 @@ loginForm.addEventListener("submit", async (e) => {
 
   //Skicka inloggningsuppgifterna till backenden via ett POST-anrop
   try {
-    const response = await fetch("http://localhost:3000/api/login", {
+    const response = await fetch(`${API_URL}/api/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
